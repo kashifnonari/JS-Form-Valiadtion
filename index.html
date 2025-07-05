@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="form-container">
+    <form class="registration-form" id="registrationForm" novalidate>
+      <h2>Register</h2>
+      <div id="success" class="success"></div>
+
+      <input type="text" id="fullname" name="fullname" placeholder="Full Name" />
+      <div class="error" id="fullname_error"></div>
+
+      <input type="text" id="email" name="email" placeholder="Email" />
+      <div class="error" id="email_error"></div>
+
+      <input type="password" id="password" name="password" placeholder="Password" />
+      <div class="error" id="password_error"></div>
+
+      <input type="date" id="dob" name="dob" placeholder="Date of Birth (MM-DD-YYYY)" />
+      <div class="error" id="dob_error"></div>
+
+      <div class="radio-group">
+        <span>Gender:</span>
+        <label><input type="radio" name="gender" id="gender" value="male" class="gender" /> Male</label>
+        <label><input type="radio" name="gender" id="gender" value="female" class="gender" /> Female</label>
+        <label><input type="radio" name="gender" id="gender" value="other" class="gender" /> Other</label>
+      </div>
+      <div class="error" id="gender_error"></div>
+
+      <select id="country" name="country">
+        <option value="">Select Country</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="India">India</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="error" id="country_error"></div>
+
+      <textarea id="bio" name="bio" rows="3" placeholder="Short Bio"></textarea>
+      <div class="error" id="bio_error"></div>
+
+      <input type="file" id="resume" name="resume" />
+      <div class="error" id="resume_error"></div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" name="terms" />
+        <span>I agree to terms</span>
+      </div>
+      <div class="error" id="terms_error"></div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
